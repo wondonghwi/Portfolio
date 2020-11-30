@@ -11,8 +11,7 @@
   <link rel="icon" type="img/png" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">-->
-  <!--  <link rel="stylesheet" href="css/stylesheet.css">-->
+  <link rel="stylesheet" href="css/stylesheet.css">
   <script src="https://kit.fontawesome.com/49835826a8.js" crossorigin="anonymous"></script>
   <script defer src="js/main.js"></script>
 </head>
@@ -24,7 +23,7 @@
     <a>Donghwi</a>
   </div>
   <ul class="nav__menu">
-    <li class="nav__menu__item">Home</li>
+    <li class="nav__menu__item active">Home</li>
     <li class="nav__menu__item">Abouts</li>
     <li class="nav__menu__item">Skills</li>
     <li class="nav__menu__item">My work</li>
@@ -32,14 +31,14 @@
   </ul>
 </nav>
 <!--Home-->
-<secion id="home">
-  <img src="images/avatar.png" alt="Donghwi" class="avatar.png">
+<section id="home">
+  <img src="images/avatar.png" alt="Donghwi" class="avatar">
   <h1 class="home__title">Hello, <br/> I'm WonDonghwi</h1>
   <h2 class="home__description">A Front-End Developer</h2>
   <button class="home__contact">CONTACT ME</button>
-</secion>
+</section>
 <!--About-->
-<section id="about">
+<section id="about" class="section section__container">
   <h1>About me</h1>
   <p>열정적인 프론트엔드 개발자 입니다.(내용추가)</p>
   <div class="about__majors">
@@ -58,9 +57,9 @@
       <div class="major__icon">
         <i class="fab fa-react"></i>
       </div>
-      <div class="major__title">
+      <h2 class="major__title">
         Front-end
-      </div>
+      </h2>
       <div class="major__description">
         React
       </div>
@@ -69,9 +68,9 @@
       <div class="major__icon">
         <i class="fab fa-node"></i>
       </div>
-      <div class="major__title">
+      <h2 class="major__title">
         Back-end
-      </div>
+      </h2>
       <div class="major__description">
         node.js
       </div>
@@ -80,8 +79,10 @@
   <div class="about__jobs">
     <div class="job">
       <img src="images/jobs/CNR_logo.jpg" alt="씨엔알리서치" class="job__logo">
-      <p class="job__name">C&R RESEARCH</p>
-      <p class="jon__period">2020 January ~ Until now</p>
+      <div class="job__description">
+        <p class="job__name">C&R RESEARCH</p>
+        <p class="jon__period">2020 January ~ Until now</p>
+      </div>
     </div>
   </div>
 </section>
@@ -161,22 +162,23 @@
 </section>
 <!--Work-->
 <section id="work">
-  <h1 class="work__title">My work</h1>
-  <h3 class="work__description">Projects</h3>
-  <div class="work__categories">
-    <button class="category__btn">
-      All<span class="category__count">6</span>
-    </button>
-    <button class="category__btn">
-      HTML & CSS<span class="category__count">2</span>
-    </button>
-    <button class="category__btn">
-      JavaScript<span class="category__count">2</span>
-    </button>
-    <button class="category__btn">
-      React<span class="category__count">2</span>
-    </button>
-
+  <div class="section__container">
+    <h1 class="work__title">My work</h1>
+    <h3 class="work__description">Projects</h3>
+    <div class="work__categories">
+      <button class="category__btn">
+        All<span class="category__count">6</span>
+      </button>
+      <button class="category__btn">
+        HTML & CSS<span class="category__count">2</span>
+      </button>
+      <button class="category__btn">
+        JavaScript<span class="category__count">2</span>
+      </button>
+      <button class="category__btn">
+        React<span class="category__count">2</span>
+      </button>
+    </div>
     <div class="work__projects">
       <a href="https://wondonghwi.github.io/YouTube_Page_CloneCoding_CSS/"
          class="project"
