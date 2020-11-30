@@ -225,4 +225,57 @@ body {
     color: var(--color-light-grey);
 }
 
-/*about*/
+/*Skills*/
+#skills {
+    background: var(--color-yellow);
+}
+
+.skillset {
+    display: flex;
+    background: var(--color-light-grey);
+    color: var(--color-white);
+    margin: 20px 0;
+}
+
+.skillset .skillset__left {
+    flex-basis: 60%;
+    background-color: var(--color-dark-grey);
+    padding: 20px 40px;
+}
+
+.skillset .skillset__title {
+    color: var(--color-white);
+}
+
+.skill {
+    margin-bottom: 32px;
+}
+
+.skillset .skillset__left .skill__description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill__bar {
+    height: 3px;
+    background-color: var(--color-grey);
+}
+
+.skill__bar .skill__value {
+    height: 3px;
+    background-color: var(--color-orange);
+}
+.skillset__right {
+    flex-basis: 40%;
+}
+
+.skillset__right .tools {
+    background-color: var(--color-grey);
+}
+
+.tools,
+.etc {
+    padding: 20px;
+}
+
+/*Work*/
