@@ -53,7 +53,7 @@ arrowUp.addEventListener('click', () => {
 
 //projects
 const workBtnContainer = document.querySelector('.work__categories');
-const porjectContainer = document.querySelector('.work__projects');
+const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
 workBtnContainer.addEventListener('click', (e) => {
   //span이 클릭 되었을때도 제대로 동작하기 위하여 parentNode 추가
@@ -61,15 +61,21 @@ workBtnContainer.addEventListener('click', (e) => {
   if (!filter) {
     return;
   }
-  console.log(filter)
-  projects.forEach((project) => {
-    if (filter === '*' || filter === project.dataset.type) {
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
+  // console.log(filter)
+  projectContainer.classList.add('anim-out');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('anim-out');
+  }, 300);
 });
+
+
 
 //Common Function
 const scrollIntoView = (selector) => {
