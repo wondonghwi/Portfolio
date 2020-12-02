@@ -29,6 +29,13 @@ homeContact.addEventListener('click', (e) => {
   scrollTo('#contact');
 });
 
+//Home Scroll down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
 //Common Function
 const scrollTo = (selector) => {
   const scrollTo = document.querySelector(selector);
