@@ -19,8 +19,18 @@ navMenu.addEventListener('click', (e) => {
   if (!link) {
     return;
   }
-  console.log(link);
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({behavior: "smooth"})
+  // console.log(link);
+  scrollTo(link);
 });
 
+// Home Contact scroll
+const homeContact = document.querySelector('.home__contact');
+homeContact.addEventListener('click', (e) => {
+  scrollTo('#contact');
+});
+
+//Common Function
+const scrollTo = (selector) => {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({behavior: "smooth"})
+};
