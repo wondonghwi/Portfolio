@@ -354,6 +354,10 @@ body {
     position: relative;
 }
 
+.work__projects .project.invisible {
+    display: none;
+}
+
 .work__projects .project .project__image {
     max-width: 100%;
     max-height: 100%;

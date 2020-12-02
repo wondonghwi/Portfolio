@@ -38,7 +38,7 @@ document.addEventListener('scroll', () => {
 
 //Arrow Btn
 const arrowUp = document.querySelector('.arrow-up');
-document.addEventListener('scroll' , () => {
+document.addEventListener('scroll', () => {
   if (window.scrollY > homeHeight / 2) {
     arrowUp.classList.add('visible');
   } else {
@@ -49,6 +49,26 @@ document.addEventListener('scroll' , () => {
 //Handle Arrow up
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home')
+});
+
+//projects
+const workBtnContainer = document.querySelector('.work__categories');
+const porjectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+  //span이 클릭 되었을때도 제대로 동작하기 위하여 parentNode 추가
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (!filter) {
+    return;
+  }
+  console.log(filter)
+  projects.forEach((project) => {
+    if (filter === '*' || filter === project.dataset.type) {
+      project.classList.remove('invisible');
+    } else {
+      project.classList.add('invisible');
+    }
+  });
 });
 
 //Common Function
