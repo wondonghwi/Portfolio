@@ -19,8 +19,15 @@ navMenu.addEventListener('click', (e) => {
   if (!link) {
     return;
   }
+  navMenu.classList.remove('open');
   // console.log(link);
   scrollIntoView(link);
+});
+
+// Navbar toggle btn
+const barToggle = document.querySelector('.nav__toggle-btn');
+barToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
 });
 
 // Home Contact scroll
