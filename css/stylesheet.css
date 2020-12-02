@@ -404,6 +404,31 @@ body {
     transform: scale(1.1);
 }
 
+/*Arrow up*/
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    color: var(--color-white);
+    background-color: var(--color-dark-pink);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 300ms ease-in;
+}
+
+.arrow-up:hover {
+    background-color: var(--color-pink);
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 @media screen and (max-width: 768px) {
     .nav__toggle-btn {
         display: block;

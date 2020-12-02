@@ -20,13 +20,13 @@ navMenu.addEventListener('click', (e) => {
     return;
   }
   // console.log(link);
-  scrollTo(link);
+  scrollIntoView(link);
 });
 
 // Home Contact scroll
 const homeContact = document.querySelector('.home__contact');
 homeContact.addEventListener('click', (e) => {
-  scrollTo('#contact');
+  scrollIntoView('#contact');
 });
 
 //Home Scroll down
@@ -36,8 +36,23 @@ document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+//Arrow Btn
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll' , () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.classList.remove('visible');
+  }
+});
+
+//Handle Arrow up
+arrowUp.addEventListener('click', () => {
+  scrollIntoView('#home')
+});
+
 //Common Function
-const scrollTo = (selector) => {
+const scrollIntoView = (selector) => {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({behavior: "smooth"})
 };
