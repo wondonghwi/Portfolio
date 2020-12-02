@@ -125,19 +125,17 @@ body {
     display: flex;
 }
 
-.nav__menu .nav__menu__item.active {
-    border: 1px solid var(--color-white);
-}
-
 .nav__menu .nav__menu__item {
     padding: 8px 12px;
     margin: 0 4px;
     cursor: pointer;
+    border: 1px solid transparent;
     border-radius: 4px;
 }
 
 .nav__menu .nav__menu__item:hover {
     background-color: var(--color-dark-pink);
+    border-color: var(--color-white);
 }
 
 .nav__toggle-btn {
@@ -310,13 +308,13 @@ body {
     padding: 8px 48px;
 }
 
-.work__categories .category__btn.active,
+.work__categories .category__btn.selected,
 .work__categories .category__btn:hover {
     background-color: var(--color-pink);
     color: var(--color-white);
 }
 
-.work__categories .category__btn.active .category__count,
+.work__categories .category__btn.selected .category__count,
 .work__categories .category__btn:hover .category__count {
     opacity: 1;
     top: 0;
