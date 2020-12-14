@@ -254,6 +254,12 @@ body {
     color: var(--color-light-grey);
 }
 
+#about p span {
+    font-size: var(--font-regular);
+    color: var(--color-dark-pink);
+    font-weight: var(--weight-bold);
+}
+
 /*Skills*/
 #skills {
     background: var(--color-yellow);
