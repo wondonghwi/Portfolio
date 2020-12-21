@@ -5,7 +5,7 @@
 
 ### 웹페이지로  포트폴리오  작성
 
-- 포트폴리오 ,  Responsive web
+- 포트폴리오 ,  Responsive web 
 
 기본에 충실하게 bootstrap같은것을 사용하지않고 <br>
 오직 Html , Css , javascript 만으로 
