@@ -4,7 +4,7 @@
 ## - React, JavaScript, (Html & css)별로 Github에 프로젝트를 포트폴리오로 만들어서 구성했습니다.
 
 # <기술스택>
-## Html, Css, vanilaJavascript
+## Html, Css, Javascript
 
 ### 웹페이지로  포트폴리오  작성
 
