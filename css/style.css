@@ -229,10 +229,11 @@ body {
 .job {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .job .job__logo {
-    width: 100px;
+    width: 200px;
     height: 100px;
 }
 

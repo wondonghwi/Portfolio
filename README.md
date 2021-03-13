@@ -8,9 +8,8 @@
 
 ### 웹페이지로  포트폴리오  작성
 
-- 포트폴리오, Responsive web 
-
-- Html, Css, javascript로 반응형 웹을 구현하였습니다.
+> 포트폴리오, Responsive web
+> Html, Css, Javascript로 반응형 웹을 구현하였습니다.
 
 ### [웹페이지 바로가기](https://wondonghwi.github.io/Portfolio/)
 
