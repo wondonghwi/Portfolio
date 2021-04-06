@@ -1,8 +1,7 @@
 # PortFolio
 
 # <프로젝트 소개>
-## - 진행한 프로젝트들을 -> React, JavaScript, (Html & css)별로 <br/> 
-나눠서 포트폴리오에 정리했습니다.
+## - 진행한 프로젝트들을 -> React, JavaScript, (Html & css)별로 <br/> 나눠서 포트폴리오에 정리했습니다.
 
 # <기술스택>
 ## Html, Css, Javascript
