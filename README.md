@@ -15,9 +15,9 @@
 
 Preview - 768px 이상
 
-![](images/portfolio768++.PNG)
+![](images/portfolio768++.png)
 
 Preview - 768px 이하(Tablets + Phones)
 
-![](images/portfolio768--.PNG)
+![](images/portfolio768--.png)
 
