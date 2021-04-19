@@ -1,6 +1,6 @@
 'use strict'
 
-//Make navbar the top
+// Make navbar transparent when it is on the top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
@@ -9,30 +9,29 @@ document.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('navbar--dark');
     }
-})
+});
 
-//Handle Scrolling navbar menu
-const navMenu = document.querySelector('.nav__menu');
-navMenu.addEventListener('click', (e) => {
-    const target = e.target;
+// Handle scrolling when tapping on the navbar menu
+const navbarMenu = document.querySelector('.nav__menu');
+navbarMenu.addEventListener('click', event => {
+    const target = event.target;
     const link = target.dataset.link;
     if (!link) {
         return;
     }
-    navMenu.classList.remove('open');
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
-    selectNavItem(target);
 });
 
-// Navbar toggle btn
-const barToggle = document.querySelector('.nav__toggle-btn');
-barToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.nav__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 });
 
 // Home Contact scroll
-const homeContact = document.querySelector('.home__contact');
-homeContact.addEventListener('click', (e) => {
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
 });
 
@@ -64,13 +63,13 @@ const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
 workBtnContainer.addEventListener('click', e => {
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-    if (filter == null) {
+    if (filter === null) {
         return;
     }
 
-    // Remove selection
+    // Remove selection from the previous item and select the new one
     const active = document.querySelector('.category__btn.selected');
-    if (active != null) {
+    if (active !== null) {
         active.classList.remove('selected');
     }
     e.target.classList.add('selected');
@@ -91,7 +90,7 @@ workBtnContainer.addEventListener('click', e => {
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior: 'smooth'});
+    scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
 
 //Scroll관련 효과
@@ -104,7 +103,6 @@ const sectionIds = [
 ];
 const sections = sectionIds.map(id => document.querySelector(id));
 const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
-
 let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
 
@@ -122,7 +120,7 @@ const observerOptions = {
 
 const observerCallback = (entries) => {
     entries.forEach(entry => {
-        if (!entry.isIntersecting) {
+        if (!entry.isIntersecting && entry.intersectionRatio > 0) {
             const index = sectionIds.indexOf(`#${entry.target.id}`);
             // 스크롤링이 아래로 되어서 페이지가 올라옴
             if (entry.boundingClientRect.y < 0) {
@@ -135,13 +133,14 @@ const observerCallback = (entries) => {
 };
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
+console.log(observer)
 sections.forEach(section => observer.observe(section));
 
 window.addEventListener('scroll', () => {
     if (window.scrollY === 0) {
         selectedNavIndex = 0;
     } else if (
-        Math.ceil(window.scrollY + window.innerHeight) >= document.body.clientHeight
+        Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight
     ) {
         selectedNavIndex = navItems.length - 1;
     }

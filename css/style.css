@@ -268,20 +268,20 @@ body {
     background: var(--color-yellow);
 }
 
-.skillset {
+.skillSet {
     display: flex;
     background: var(--color-light-grey);
     color: var(--color-white);
     margin: 20px 0;
 }
 
-.skillset .skillset__left {
+.skillSet .skillSet__left {
     flex-basis: 60%;
     background-color: var(--color-dark-grey);
     padding: 20px 40px;
 }
 
-.skillset .skillset__title {
+.skillSet .skillSet__title {
     color: var(--color-white);
 }
 
@@ -289,7 +289,7 @@ body {
     margin-bottom: 32px;
 }
 
-.skillset .skillset__left .skill__description {
+.skillSet .skillSet__left .skill__description {
     display: flex;
     justify-content: space-between;
 }
@@ -304,11 +304,11 @@ body {
     background-color: var(--color-orange);
 }
 
-.skillset__right {
+.skillSet__right {
     flex-basis: 40%;
 }
 
-.skillset__right .tools {
+.skillSet__right .tools {
     background-color: var(--color-grey);
 }
 
