@@ -133,7 +133,6 @@ const observerCallback = (entries) => {
 };
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
-console.log(observer)
 sections.forEach(section => observer.observe(section));
 
 window.addEventListener('scroll', () => {
